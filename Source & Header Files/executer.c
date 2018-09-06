@@ -239,7 +239,7 @@ void execute_reset(game_data *game, commandInfo *com){
 
 void execute_mark_errors(game_data *game,commandInfo *com){
 	if(com->args[0]!=0 && com->args[0]!=1){
-		printf("Error: the values should be 0 or 1\n");
+		printf("Error: the value should be 0 or 1\n");
 		free_command(com);
 		return;
 	}
@@ -353,7 +353,7 @@ void execute_edit(game_data *game, commandInfo *com){
 		board = create_board(DEFAULT_SIZE,DEFAULT_SIZE);
 	}
 	if(board.block_columns == 0){
-		printf("Error: File doesn't exist or cannot be opened\n");
+		printf("Error: File cannot be opened\n");
 	}else{
 		free_game_data(game);
 		game->board = board;
